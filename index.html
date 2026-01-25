@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>O'Fitness | Bien-être en Entreprise - Le Sport, la Santé</title>
+    <meta name="description"
+        content="Transformez la santé de vos équipes en performance durable. Solutions sport et bien-être adaptées aux entreprises, ONG et organisations. Séance découverte gratuite.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/OfitnessLogo.svg">
+
+    <!-- Google Fonts - Montserrat (Typographie professionnelle) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/high-energy.css">
+    <link rel="stylesheet" href="css/hero-brutalist.css">
+</head>
+
+<body>
+    <!-- ============ HEADER ============ -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/Ofitness_name.svg" alt="O'Fitness" class="logo-img">
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation -->
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                    <li><a href="#vision" class="nav-link">Notre vision</a></li>
+                    <li><a href="#solutions" class="nav-link">Nos solutions</a></li>
+                    <li><a href="#approche" class="nav-link">Notre approche</a></li>
+                    <li><a href="#difference" class="nav-link">Notre différence</a></li>
+                    <li><a href="#confiance" class="nav-link">Ils nous font confiance</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="#contact" class="btn btn-primary">Parlons de votre projet</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Navigation Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- ============ HERO - IMMERSIF BRUTALISTE ============ -->
+    <section class="hero hero-brutalist" id="hero">
+
+        <!-- 
+            IMAGE/VIDEO PROFESSIONNELLE A AJOUTER - HERO
+            ═══════════════════════════════════════════════════════════════════
+            
+            ZONE : Arriere-plan du Hero (premiere impression du site)
+            
+            OPTION 1 - VIDEO (recommande) :
+            - Video de 15-30 secondes en boucle
+            - Contenu : Session de coaching, equipe en action, sport en entreprise
+            - Format : MP4, 1920x1080 minimum
+            - Taille max : 10 Mo (compression recommandee)
+            - Hebergement : Vimeo ou propre serveur
+            
+            OPTION 2 - IMAGE :
+            - Photo haute qualite de sport/bien-etre en entreprise
+            - Format : JPG, 1920x1080 minimum
+            - Style : Dynamique, positive, professionnelle
+            
+            POUR REMPLACER :
+            - Video : changer l'URL dans src="..."
+            - Image : changer l'URL dans poster="..." et src="..."
+        ═══════════════════════════════════════════════════════════════════
+        -->
+        <div class="hero-bg hero-bg-zoom">
+            <video autoplay muted loop playsinline
+                poster="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1920&q=80">
+                <source src="https://cdn.coverr.co/videos/coverr-a-woman-jumping-rope-in-a-crossfit-gym-5285/1080p.mp4"
+                    type="video/mp4">
+                <!-- Fallback image si video non supportee -->
+                <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1920&q=80"
+                    alt="Session coaching O'Fitness" loading="eager">
+            </video>
+        </div>
+
+        <!-- Title Outline in Background -->
+        <span class="hero-title-outline" aria-hidden="true">PERFORMANCE</span>
+
+        <div class="container">
+            <div class="hero-content hero-content-left">
+                <!-- Animated Badge -->
+                <div class="hero-badge hero-slide-up">
+                    <span class="hero-badge-dot"></span>
+                    Le Sport, la Santé
+                </div>
+
+                <!-- XXL Title - ÉNORME -->
+                <h1 class="hero-slide-up" style="animation-delay: 0.1s;">
+                    Des équipes<br>
+                    <span class="text-gradient">en meilleure santé</span><br>
+                    une entreprise<br>
+                    <span class="text-solid text-solid-xxl">plus performante</span>
+                </h1>
+
+                <p class="hero-subtitle hero-slide-up" style="animation-delay: 0.4s;">
+                    Transformez le bien-être de vos collaborateurs en avantage stratégique.
+                    Solutions sport et bien-être adaptées aux entreprises, ONG et organisations.
+                </p>
+
+                <!-- Bouton Principal Imposant + Lien WhatsApp Secondaire -->
+                <div class="hero-cta-brutalist hero-slide-up" style="animation-delay: 0.6s;">
+                    <a href="#contact" class="btn btn-primary btn-hero-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        Demandez une session découverte
+                    </a>
+
+                    <!-- Lien WhatsApp discret -->
+                    <a href="https://wa.me/22890000000?text=Bonjour%20O'Fitness" class="hero-link-secondary"
+                        target="_blank" rel="noopener">
+                        Ou discutez sur WhatsApp
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="hero-scroll-icon"></div>
+            <span>Découvrir</span>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 1 : NOTRE VISION ============ -->
+    <section class="vision section-alt" id="vision">
+        <div class="container">
+            <div class="vision-grid reveal">
+                <div class="vision-content">
+                    <span class="section-label">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 16v-4M12 8h.01" />
+                        </svg>
+                        Notre Vision
+                    </span>
+                    <h2 class="section-title">Le bien-être au travail n'est pas un luxe.<br>C'est une stratégie.</h2>
+
+                    <p class="vision-text">
+                        Chez O'Fitness, nous croyons que <strong>la performance durable des entreprises</strong> passe
+                        avant tout par la <strong>santé et l'équilibre de leurs collaborateurs</strong>.
+                    </p>
+
+                    <p class="vision-text">
+                        Dans un environnement professionnel marqué par le stress, la sédentarité et la pression des
+                        résultats, nous plaçons <strong>le sport et le bien-être au cœur de la stratégie
+                            humaine</strong> des organisations.
+                    </p>
+
+                    <p class="vision-text">
+                        Notre vision est simple :<br>
+                        <strong>Des equipes en meilleure sante, plus engagees et plus soudees</strong>, pour des
+                        entreprises plus performantes et attractives.
+                    </p>
+
+                    <!-- Valeurs O'Fitness - Icones professionnelles -->
+                    <div
+                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-sm); margin-top: var(--spacing-lg);">
+
+                        <!-- Valeur 1 : Bien-etre durable -->
+                        <div style="display: flex; align-items: center; gap: var(--spacing-xs);">
+                            <span
+                                style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--he-accent-glow); border-radius: 8px;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--he-accent)"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                                </svg>
+                            </span>
+                            <strong style="font-size: 14px; color: var(--he-text-primary);">Bien-etre durable</strong>
+                        </div>
+
+                        <!-- Valeur 2 : Cohesion humaine -->
+                        <div style="display: flex; align-items: center; gap: var(--spacing-xs);">
+                            <span
+                                style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--he-accent-glow); border-radius: 8px;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--he-accent)"
+                                    stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                            </span>
+                            <strong style="font-size: 14px; color: var(--he-text-primary);">Cohesion humaine</strong>
+                        </div>
+
+                        <!-- Valeur 3 : Performance collective -->
+                        <div style="display: flex; align-items: center; gap: var(--spacing-xs);">
+                            <span
+                                style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--he-accent-glow); border-radius: 8px;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--he-accent)"
+                                    stroke-width="2">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                </svg>
+                            </span>
+                            <strong style="font-size: 14px; color: var(--he-text-primary);">Performance
+                                collective</strong>
+                        </div>
+
+                        <!-- Valeur 4 : Inclusion et accessibilite -->
+                        <div style="display: flex; align-items: center; gap: var(--spacing-xs);">
+                            <span
+                                style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--he-accent-glow); border-radius: 8px;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--he-accent)"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="2" y1="12" x2="22" y2="12" />
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                </svg>
+                            </span>
+                            <strong style="font-size: 14px; color: var(--he-text-primary);">Inclusion et
+                                accessibilite</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IMAGE PROFESSIONNELLE A AJOUTER -->
+                <!-- 
+                    ZONE D'IMAGE : Photo equipe O'Fitness
+                    RECOMMANDATION : 
+                    - Photo de groupe de l'equipe O'Fitness
+                    - Ou photo d'une session de coaching en entreprise
+                    - Format recommande : 800x600px minimum
+                    - Style : Dynamique, professionnelle, humaine
+                    
+                    REMPLACER L'URL ci-dessous par le chemin de votre image :
+                    Exemple : src="images/equipe-ofitness.jpg"
+                -->
+                <div class="vision-image">
+                    <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&q=80"
+                        alt="Equipe O'Fitness en action" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 2 : NOS SOLUTIONS ============ -->
+    <section class="solutions" id="solutions">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                        <polyline points="2 17 12 22 22 17" />
+                        <polyline points="2 12 12 17 22 12" />
+                    </svg>
+                    Nos Solutions
+                </span>
+                <h2 class="section-title">Des solutions bien-être adaptées à la réalité de votre entreprise</h2>
+                <p style="max-width: 700px; margin: 0 auto; color: var(--color-text-gray); font-size: 16px;">
+                    Chaque organisation est unique. C'est pourquoi O'Fitness conçoit des <strong>solutions flexibles,
+                        personnalisées et accessibles</strong> à tous les niveaux.
+                </p>
+            </div>
+
+            <div class="solutions-grid">
+                <!-- Solution 1 -->
+                <div class="solution-card reveal">
+                    <div class="solution-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                    </div>
+                    <h3>Sport en entreprise</h3>
+                    <p>Seances sportives directement sur votre lieu de travail ou en exterieur, animees par des coachs
+                        certifies.</p>
+                    <p
+                        style="margin-top: var(--spacing-xs); font-size: 13px; color: var(--color-primary); font-weight: 600;">
+                        Objectif : lutter contre la sedentarite et dynamiser les equipes.
+                    </p>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="solution-card reveal">
+                    <div class="solution-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg>
+                    </div>
+                    <h3>Programmes bien-etre</h3>
+                    <p>Zumba, fitness, stretching, renforcement musculaire, relaxation et activites adaptees.</p>
+                    <p
+                        style="margin-top: var(--spacing-xs); font-size: 13px; color: var(--color-primary); font-weight: 600;">
+                        Objectif : ameliorer la sante physique et mentale des collaborateurs.
+                    </p>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="solution-card reveal">
+                    <div class="solution-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3>Evenements et challenges collectifs</h3>
+                    <p>Animations sportives, journees bien-etre, challenges internes, team building.</p>
+                    <p
+                        style="margin-top: var(--spacing-xs); font-size: 13px; color: var(--color-primary); font-weight: 600;">
+                        Objectif : renforcer la cohesion et creer des moments federateurs.
+                    </p>
+                </div>
+
+                <!-- Solution 4 -->
+                <div class="solution-card reveal">
+                    <div class="solution-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                        </svg>
+                    </div>
+                    <h3>Accompagnement et suivi</h3>
+                    <p>Suivi des participants, adaptation des seances et accompagnement progressif.</p>
+                    <p
+                        style="margin-top: var(--spacing-xs); font-size: 13px; color: var(--color-primary); font-weight: 600;">
+                        Objectif : garantir des resultats concrets et durables.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 3 : NOTRE APPROCHE ============ -->
+    <section class="approche section-alt" id="approche">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    Notre Approche
+                </span>
+                <h2 class="section-title">Une méthode claire, humaine et efficace</h2>
+                <p style="max-width: 700px; margin: 0 auto; color: var(--color-text-gray); font-size: 16px;">
+                    Chez O'Fitness, nous ne proposons pas de solutions standardisées.<br>
+                    Nous <strong>construisons chaque programme</strong> en tenant compte de vos contraintes, de votre
+                    culture d'entreprise et de vos objectifs.
+                </p>
+            </div>
+
+            <!-- Étapes -->
+            <div class="steps-grid reveal">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Analyse de vos besoins</h3>
+                    <p>Échange pour comprendre votre environnement, vos équipes et vos priorités.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Conception sur-mesure</h3>
+                    <p>Création d'un programme adapté à vos objectifs et à votre organisation.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Mise en œuvre terrain</h3>
+                    <p>Animation des séances par nos coachs certifiés, dans un cadre sécurisé et motivant.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h3>Suivi & ajustement</h3>
+                    <p>Évaluation continue pour optimiser l'impact et l'engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 4 : NOTRE DIFFÉRENCE ============ -->
+    <section class="difference" id="difference">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    Notre Différence
+                </span>
+                <h2 class="section-title">Bien plus qu'une pause sportive</h2>
+                <p style="max-width: 700px; margin: 0 auto; color: var(--color-text-light); font-size: 16px;">
+                    O'Fitness se distingue par une <strong style=" color: var(--color-white);">approche globale du
+                        bien-être en entreprise</strong>.
+                </p>
+            </div>
+
+            <div class="difference-grid">
+                <div class="difference-item reveal">
+                    <div class="difference-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <div class="difference-content">
+                        <h3>Coachs certifiés et pédagogues</h3>
+                        <p>Des professionnels formés aux spécificités du sport en entreprise.</p>
+                    </div>
+                </div>
+
+                <div class="difference-item reveal">
+                    <div class="difference-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <div class="difference-content">
+                        <h3>Programmes accessibles à tous les niveaux</h3>
+                        <p>Du débutant au confirmé, chacun trouve sa place.</p>
+                    </div>
+                </div>
+
+                <div class="difference-item reveal">
+                    <div class="difference-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                    </div>
+                    <div class="difference-content">
+                        <h3>Flexibilité des formats, lieux et horaires</h3>
+                        <p>Nous nous adaptons à votre réalité opérationnelle.</p>
+                    </div>
+                </div>
+
+                <div class="difference-item reveal">
+                    <div class="difference-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg>
+                    </div>
+                    <div class="difference-content">
+                        <h3>Approche humaine, inclusive et motivante</h3>
+                        <p>Bienveillance et respect au cœur de notre démarche.</p>
+                    </div>
+                </div>
+
+                <div class="difference-item reveal">
+                    <div class="difference-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                        </svg>
+                    </div>
+                    <div class="difference-content">
+                        <h3>Vision long terme du bien-être au travail</h3>
+                        <p>Des résultats durables, pas des effets de mode.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center reveal" style="margin-top: var(--spacing-xl);">
+                <p
+                    style="font-size: 18px; color: var(--color-white); font-weight: 300px; max-width: 600px; margin: 0 auto;">
+                    Nous ne faisons pas "faire du sport".<br>
+                    Nous créons une culture du bien-être.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 5 : ILS NOUS FONT CONFIANCE ============ -->
+    <section class="trust section-alt" id="confiance">
+        <div class="container">
+            <div class="trust-intro reveal">
+                <span class="section-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="17 11 19 13 23 9" />
+                    </svg>
+                    Ils Nous Font Confiance
+                </span>
+                <h2 class="section-title">Des entreprises qui ont choisi d'investir dans leur capital humain</h2>
+                <p style="max-width: 700px; margin: 0 auto; color: var(--color-text-gray); text-align: center;">
+                    Des entreprises, organisations et institutions nous font déjà confiance pour accompagner leurs
+                    équipes vers plus de bien-être et de performance.
+                </p>
+            </div>
+
+            <!-- Benefices observes - Sans emojis -->
+            <div class="benefits-grid reveal" style="margin-top: var(--spacing-xl);">
+
+                <!-- Benefice 1 : Collaborateurs motives -->
+                <div class="benefit-item">
+                    <div class="benefit-image-container"
+                        style="margin-bottom: 20px; overflow: hidden; border-radius: 12px; height: 200px;">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80"
+                            alt="Collaborateurs motivés par le sport"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Collaborateurs plus motives</h3>
+                    <p>L'energie du sport se ressent dans le travail quotidien.</p>
+                </div>
+
+                <!-- Benefice 2 : Meilleure ambiance -->
+                <div class="benefit-item">
+                    <div class="benefit-image-container"
+                        style="margin-bottom: 20px; overflow: hidden; border-radius: 12px; height: 200px;">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=80"
+                            alt="Bonne ambiance de travail" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Meilleure ambiance de travail</h3>
+                    <p>Des equipes qui se connaissent mieux et collaborent mieux.</p>
+                </div>
+
+                <!-- Benefice 3 : Engagement renforce -->
+                <div class="benefit-item">
+                    <div class="benefit-image-container"
+                        style="margin-bottom: 20px; overflow: hidden; border-radius: 12px; height: 200px;">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&q=80"
+                            alt="Engagement et collaboration" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Engagement renforce</h3>
+                    <p>Des collaborateurs qui se sentent pris en compte.</p>
+                </div>
+
+                <!-- Benefice 4 : Image employeur -->
+                <div class="benefit-item">
+                    <div class="benefit-image-container"
+                        style="margin-bottom: 20px; overflow: hidden; border-radius: 12px; height: 200px;">
+                        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=400&q=80"
+                            alt="Image employeur moderne" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Image employeur valorisee</h3>
+                    <p>Un atout pour attirer et fideliser les talents.</p>
+                </div>
+            </div>
+
+            <!-- Témoignages -->
+            <div class="testimonial reveal" style="margin-top: var(--spacing-xl);">
+                <p class="testimonial-text">
+                    "Les séances de Zumba du mercredi sont devenues LE rendez-vous de la semaine. L'ambiance a changé,
+                    les gens se parlent plus, sourient plus. Et ça se ressent sur les projets."
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">ML</div>
+                    <div class="testimonial-info">
+                        <strong>Marie Laurent</strong>
+                        <span>DRH, Entreprise Tech</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial reveal" style="margin-top: var(--spacing-md);">
+                <p class="testimonial-text">
+                    "En 6 mois, on a vu les arrêts maladie diminuer. Mais surtout, l'équipe est plus soudée. O'Fitness
+                    nous accompagne vraiment, c'est un vrai partenaire."
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">AS</div>
+                    <div class="testimonial-info">
+                        <strong>Amara Sow</strong>
+                        <span>Directeur Général, ONG Développement</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 6 : PARLONS DE VOTRE PROJET ============ -->
+    <section class="contact" id="contact">
+        <div class="container contact-inner">
+            <div class="text-center reveal">
+                <span class="section-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                    </svg>
+                    Parlons de Votre Projet
+                </span>
+                <h2 class="section-title">Transformons ensemble le bien-être en performance</h2>
+                <p class="contact-intro">
+                    Vous souhaitez améliorer la santé, la cohésion et la motivation de vos équipes ?<br>
+                    <strong>O'Fitness vous accompagne à chaque étape.</strong>
+                </p>
+                <p class="contact-intro">
+                    Discutons de votre projet et découvrons comment mettre en place une solution adaptée à votre
+                    entreprise.
+                </p>
+            </div>
+
+            <div class="contact-grid reveal">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Votre nom *</label>
+                        <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Entreprise / Organisation *</label>
+                        <input type="text" id="company" name="company" placeholder="Nom de votre structure" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email professionnel *</label>
+                        <input type="email" id="email" name="email" placeholder="vous@entreprise.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+228 90 00 00 00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Parlez-nous de votre projet</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Nombre de collaborateurs, objectifs, contraintes..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13" />
+                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                        </svg>
+                        Demander une session découverte
+                    </button>
+
+                    <div class="form-note">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        <span>Réponse sous 24h • Session découverte gratuite • Sans engagement</span>
+                    </div>
+                </form>
+
+                <div class="contact-aside">
+                    <h3>Échange simple et rapide</h3>
+                    <p>On vous répond sous 24h. Un vrai échange, pas un formulaire automatique.</p>
+
+                    <div class="contact-feature">
+                        <!-- Icone simple sans carre -->
+                        <div style="color: var(--color-primary); margin-right: 15px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </div>
+                        <span>+228 90 00 00 00</span>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div style="color: var(--color-primary); margin-right: 15px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <span>contact@ofitness.tg</span>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div style="color: var(--color-primary); margin-right: 15px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <span>Lomé, Togo</span>
+                    </div>
+
+                    <a href="https://wa.me/22890000000?text=Bonjour%20O'Fitness,%20je%20souhaite%20discuter%20d'un%20projet"
+                        class="btn btn-whatsapp btn-full" target="_blank" rel="noopener" style="margin-top: 20px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                        Contactez-nous dès maintenant
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <a href="#" class="footer-logo">
+                        <img src="images/O'Fitness logo_1.png" alt="O'Fitness" style="max-height: 40px;">
+                    </a>
+                    <p class="footer-slogan">Le sport, la santé</p>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <nav class="footer-links">
+                    <a href="#vision">Notre vision</a>
+                    <a href="#solutions">Nos solutions</a>
+                    <a href="#approche">Notre approche</a>
+                    <a href="#difference">Notre différence</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <p class="footer-copy">© 2026 O'Fitness. Sport et bien-être en entreprise.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/22890000000?text=Bonjour%20O'Fitness" target="_blank" rel="noopener"
+            aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/high-energy.js"></script>
+</body>
+
+</html>

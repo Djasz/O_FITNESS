@@ -1,0 +1,152 @@
+/* ========================================
+   HERO SECTION - IMMERSIF BRUTALISTE
+   ======================================== */
+
+/* Alignement à gauche pour le contenu Hero */
+.hero-content-left {
+    text-align: left !important;
+    align-items: flex-start !important;
+    max-width: 900px;
+    /* Limite la largeur pour la lisibilité */
+}
+
+/* Titre XXL avec outline géant qui chevauche */
+.text-outline-xxl {
+    font-size: clamp(4rem, 12vw, 10rem) !important;
+    line-height: 0.85 !important;
+    margin-top: -0.3em !important;
+    /* Chevauche le texte au-dessus */
+    display: block !important;
+}
+
+/* Titre XXL en texte PLEIN (sans stroke) */
+.text-solid-xxl {
+    font-size: clamp(4rem, 12vw, 10rem) !important;
+    line-height: 0.85 !important;
+    margin-top: -0.3em !important;
+    /* Chevauche le texte au-dessus */
+    display: block !important;
+    color: var(--color-primary) !important;
+    font-weight: 800 !important;
+    -webkit-text-fill-color: var(--color-primary) !important;
+    text-shadow: 0 4px 20px rgba(0, 102, 179, 0.3);
+}
+
+/* Alignement correct du paragraphe hero-subtitle */
+.hero-subtitle {
+    text-align: left !important;
+    max-width: 600px;
+}
+
+/* Bouton principal imposant */
+.btn-hero-primary {
+    min-width: 350px;
+    padding: 20px 40px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    box-shadow: 0 10px 40px rgba(0, 102, 179, 0.4) !important;
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 15px 50px rgba(0, 102, 179, 0.6) !important;
+}
+
+/* Container CTA Brutalist (colonne) */
+.hero-cta-brutalist {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: var(--spacing-lg);
+}
+
+/* Lien secondaire WhatsApp discret */
+.hero-link-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    border-bottom: 1px solid transparent;
+}
+
+.hero-link-secondary:hover {
+    color: white;
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+    gap: 12px;
+    /* Espace augmente au hover */
+}
+
+.hero-link-secondary svg {
+    transition: transform 0.3s ease;
+}
+
+.hero-link-secondary:hover svg {
+    transform: translate(2px, -2px);
+    /* Flèche ↗ */
+}
+
+/* ========================================
+   ANIMATIONS - SLIDE UP & FADE IN
+   ======================================== */
+
+@keyframes heroSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-slide-up {
+    animation: heroSlideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    /* Initialement invisible */
+}
+
+/* ========================================
+   EFFET ZOOM CINÉMATIQUE SUR BACKGROUND
+   ======================================== */
+
+.hero-bg-zoom {
+    animation: cinematicZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes cinematicZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+        /* Zoom avant de 10% */
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .text-outline-xxl {
+        font-size: clamp(2.5rem, 10vw, 5rem) !important;
+    }
+
+    .btn-hero-primary {
+        min-width: 100%;
+        padding: 16px 30px !important;
+    }
+
+    .hero-cta-brutalist {
+        align-items: stretch;
+    }
+
+    .hero-link-secondary {
+        justify-content: center;
+    }
+}

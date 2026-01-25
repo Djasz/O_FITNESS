@@ -1,0 +1,26 @@
+{
+    "name": "ofitness-website",
+    "version": "1.0.0",
+    "description": "O'Fitness - Solutions sport et bien-être pour entreprises au Togo",
+    "main": "index.html",
+    "scripts": {
+        "dev": "npx serve -l 3000",
+        "start": "npx serve -l 3000",
+        "deploy": "vercel --prod"
+    },
+    "keywords": [
+        "fitness",
+        "wellness",
+        "corporate",
+        "togo",
+        "health",
+        "sport"
+    ],
+    "author": "O'Fitness Togo",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/VOTRE-USERNAME/ofitness.git"
+    },
+    "homepage": "https://ofitness.vercel.app"
+}
