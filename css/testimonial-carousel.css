@@ -1,0 +1,399 @@
+/* ========================================
+   CARROUSEL DE TÉMOIGNAGES - HORIZONTAL
+   Style Premium avec Glassmorphism
+   ======================================== */
+
+/* Section container */
+.testimonial-carousel-section {
+    margin-top: 80px;
+    padding: 40px 0;
+}
+
+/* Titre discret */
+.testimonial-section-title {
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-text-gray);
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+/* Container du carrousel avec scroll horizontal */
+.testimonial-carousel {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 20px 5%;
+    -webkit-overflow-scrolling: touch;
+
+    /* Barre de scroll invisible */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.testimonial-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Carte de témoignage */
+.testimonial-card {
+    flex-shrink: 0;
+    width: 350px;
+    min-height: 220px;
+    padding: 28px;
+    border-radius: 16px;
+
+    /* Glassmorphism premium */
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+
+    /* Snap effect */
+    scroll-snap-align: center;
+
+    /* Animation et transition */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    cursor: pointer;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px) rotateX(2deg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Icône de citation discrète en haut à droite */
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    width: 28px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23cccccc' stroke-width='1.5'%3E%3Cpath d='M3 21c3-3 6-6 6-11a4 4 0 1 0-6 3.5c0-2.5 3-6 6-9m12 16.5c3-3 6-6 6-11a4 4 0 1 0-6 3.5c0-2.5 3-6 6-9'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.testimonial-card:hover::before {
+    opacity: 0.8;
+}
+
+/* Header de la carte : Avatar + Nom */
+.testimonial-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+/* Avatar circulaire */
+.testimonial-card-avatar {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0, 102, 179, 0.3);
+}
+
+/* Info auteur */
+.testimonial-card-author {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.testimonial-card-author strong {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+.testimonial-card-author span {
+    font-size: 12px;
+    color: var(--color-text-gray);
+    opacity: 0.8;
+}
+
+/* Texte du témoignage avec ellipsis */
+.testimonial-card-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--color-text);
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 16px;
+    font-style: italic;
+}
+
+/* Texte complet (état expanded) */
+.testimonial-card.expanded .testimonial-card-text {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
+
+/* Bouton "Lire plus" */
+.testimonial-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: none;
+    border: none;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.testimonial-read-more:hover {
+    gap: 10px;
+    color: var(--color-primary-dark, #004080);
+}
+
+.testimonial-read-more svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* Flèche rotation quand expanded */
+.testimonial-card.expanded .testimonial-read-more svg {
+    transform: rotate(180deg);
+}
+
+/* ========================================
+   MODAL POUR TÉMOIGNAGE COMPLET
+   ======================================== */
+
+.testimonial-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.testimonial-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.testimonial-modal {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 550px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+}
+
+.testimonial-modal-overlay.active .testimonial-modal {
+    transform: scale(1) translateY(0);
+}
+
+.testimonial-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-bg-light);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.testimonial-modal-close:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+.testimonial-modal-close svg {
+    width: 20px;
+    height: 20px;
+}
+
+.testimonial-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-modal-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.testimonial-modal-author strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.testimonial-modal-author span {
+    color: var(--color-text-gray);
+    font-size: 14px;
+}
+
+.testimonial-modal-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-text);
+    font-style: italic;
+}
+
+.testimonial-modal-text::before {
+    content: '"';
+    font-size: 48px;
+    color: var(--color-primary);
+    opacity: 0.3;
+    display: block;
+    line-height: 0.5;
+    margin-bottom: 10px;
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE FIRST
+   ======================================== */
+
+@media (max-width: 768px) {
+    .testimonial-carousel-section {
+        margin-top: 50px;
+        padding: 20px 0;
+    }
+
+    .testimonial-section-title {
+        font-size: 11px;
+        margin-bottom: 24px;
+    }
+
+    .testimonial-carousel {
+        gap: 16px;
+        padding: 16px 5%;
+    }
+
+    /* Une seule carte visible à la fois sur mobile */
+    .testimonial-card {
+        width: 85vw;
+        max-width: 320px;
+        min-height: 200px;
+        padding: 22px;
+    }
+
+    .testimonial-card-avatar {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        font-size: 14px;
+    }
+
+    .testimonial-card-author strong {
+        font-size: 14px;
+    }
+
+    .testimonial-card-text {
+        font-size: 13px;
+        -webkit-line-clamp: 3;
+    }
+
+    /* Modal mobile */
+    .testimonial-modal {
+        padding: 28px;
+        border-radius: 16px;
+    }
+
+    .testimonial-modal-avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .testimonial-modal-text {
+        font-size: 15px;
+    }
+}
+
+/* Tablette */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .testimonial-card {
+        width: 320px;
+    }
+}
+
+/* Effet de dégradé sur les bords du carrousel */
+.testimonial-carousel-wrapper {
+    position: relative;
+}
+
+.testimonial-carousel-wrapper::before,
+.testimonial-carousel-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.testimonial-carousel-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-bg-light), transparent);
+}
+
+.testimonial-carousel-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-bg-light), transparent);
+}
