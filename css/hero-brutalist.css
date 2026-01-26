@@ -33,9 +33,14 @@
 }
 
 /* Alignement correct du paragraphe hero-subtitle */
+/* Alignement correct du paragraphe hero-subtitle */
 .hero-subtitle {
-    text-align: start !important;
+    text-align: left !important;
     max-width: 600px;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    padding-left: 2px;
+    /* Micro-ajustement visuel pour aligner avec le titre */
 }
 
 /* Bouton principal imposant */

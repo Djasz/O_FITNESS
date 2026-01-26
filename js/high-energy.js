@@ -84,7 +84,7 @@
 
       // Initialiser tous les modules dans l'ordre
       this.initPreloader();      // 1. Écran de chargement
-      this.initCustomCursor();   // 2. Curseur magnétique (desktop uniquement)
+      // this.initCustomCursor();   // 2. Curseur magnétique (DÉSACTIVÉ)
       this.initScrollProgress(); // 3. Barre de progression
       this.initScrollReveal();   // 4. Animations d'apparition
       this.initMagneticButtons();// 5. Effet d'attraction sur boutons
