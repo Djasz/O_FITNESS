@@ -1,0 +1,259 @@
+/* ════════════════════════════════════════════════════════════════════════════
+   UI CONSISTENCY - O'FITNESS
+   Alignement éditorial à gauche + Harmonisation boutons
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   1. ALIGNEMENT ÉDITORIAL À GAUCHE (Text-Align)
+   ⚠️ DÉSACTIVÉ - Les textes reprennent leur alignement d'origine
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* 
+   ❌ SECTION DÉSACTIVÉE PAR L'UTILISATEUR ❌
+   Pour réactiver : Décommenter les lignes ci-dessous
+*/
+
+/*
+body,
+p,
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.section-subtitle,
+.hero-subtitle,
+.card-title,
+.card-text,
+.benefit-item h3,
+.benefit-item p,
+.solution-card h3,
+.solution-card p,
+.difference-content h3,
+.difference-content p,
+.step-item h3,
+.step-item p {
+    text-align: left !important;
+}
+*/
+
+/*
+.loader-text,
+.modal-close-btn,
+.marquee-label,
+.nav-list,
+.header-inner {
+    text-align: center !important;
+}
+*/
+
+/*
+.section-title {
+    text-align: left !important;
+    margin-bottom: 16px;
+}
+
+.section-subtitle {
+    text-align: left !important;
+    margin-bottom: 40px;
+}
+*/
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   2. HARMONISATION DES BOUTONS (Taille, Padding, Police)
+   Border-radius GARDÉ (Option C - pas de modification)
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Tous les boutons - Standards unifiés */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-hero-primary,
+.cta-button,
+button[type="submit"],
+.contact-form button,
+.portfolio-filter-btn {
+    /* Taille de police uniforme */
+    font-size: 16px !important;
+
+    /* Padding harmonisé */
+    padding: 16px 32px !important;
+
+    /* Poids de police cohérent */
+    font-weight: 600 !important;
+
+    /* Transition fluide */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+    /* Hauteur minimale pour cohérence */
+    min-height: 48px;
+
+    /* Centrage du texte dans le bouton */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Note: border-radius GARDÉ (défini dans style.css) */
+}
+
+/* Boutons Hero - Légèrement plus imposants */
+.btn-hero-primary {
+    font-size: 18px !important;
+    padding: 20px 40px !important;
+    min-height: 56px;
+}
+
+/* Boutons secondaires - Même taille mais style différent */
+.btn-secondary,
+.hero-link-secondary {
+    font-size: 16px !important;
+    padding: 16px 32px !important;
+}
+
+/* États hover - Cohérents pour tous les boutons */
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 102, 179, 0.3);
+}
+
+/* Boutons mobiles - Largeur pleine */
+@media (max-width: 768px) {
+
+    .btn,
+    .btn-primary,
+    .btn-hero-primary {
+        width: 100% !important;
+        padding: 18px 24px !important;
+        font-size: 16px !important;
+    }
+
+    .btn-hero-primary {
+        padding: 20px 24px !important;
+    }
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   3. OPTIMISATION CONTRASTES COULEURS (Accessibilité WCAG AA)
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Nouveau bleu clair avec meilleur contraste */
+:root {
+    --he-accent-light-optimized: #00D4FF;
+    /* Ratio 7.1:1 sur fond sombre */
+    --he-accent-medium: #00B8FF;
+    /* Ratio 4.7:1 sur fond sombre */
+}
+
+/* Textes sur fond sombre - Contraste optimisé */
+.hero-content,
+.contact-section,
+.footer-content,
+body.high-energy .hero h1,
+body.high-energy .contact {
+    color: #FFFFFF !important;
+}
+
+/* Accents sur fond sombre - Utiliser le nouveau bleu */
+.hero-content .accent-text,
+.hero-badge,
+.section-label {
+    color: var(--he-accent-light-optimized, #00D4FF) !important;
+}
+
+/* Liens sur fond sombre */
+a.hero-link-secondary,
+.footer-link {
+    color: var(--he-accent-medium, #00B8FF);
+}
+
+a.hero-link-secondary:hover,
+.footer-link:hover {
+    color: var(--he-accent-light-optimized, #00D4FF);
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   4. GRILLES RESPONSIVES AVEC ANIMATIONS
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Grille d'avantages - Desktop/Tablette */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    transition: gap 0.3s ease;
+}
+
+/* Mobile - Liste verticale avec animation slide-in */
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Animation slide-in pour chaque carte */
+    .benefit-item {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    /* Délais échelonnés (effet cascade) */
+    .benefit-item:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .benefit-item:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .benefit-item:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .benefit-item:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   5. SÉCURITÉ IMAGES MOBILES (Débordement)
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Toutes les images - Sécurité de base */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Images dans les cartes */
+.benefit-image-container img,
+.portfolio-card img,
+.testimonial-avatar,
+.solution-card img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Sécurité supplémentaire pour petits écrans */
+@media (max-width: 375px) {
+    .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    img {
+        max-width: calc(100vw - 32px);
+    }
+}
