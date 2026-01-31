@@ -201,9 +201,10 @@ body.high-energy::before {
 }
 
 /* Masquer le curseur par défaut sur desktop */
+/* Cursor hidden rule removed to restore default mouse pointer */
 body.high-energy,
 body.high-energy * {
-    cursor: none !important;
+    cursor: auto !important;
 }
 
 /* Mobile : Restaurer le curseur normal (pas de hover sur tactile) */
@@ -343,9 +344,9 @@ body.high-energy .hero-bg::after {
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg,
-            rgba(26, 26, 46, 0.5) 0%,
-            rgba(26, 26, 46, 0.7) 50%,
-            rgba(26, 26, 46, 0.95) 100%);
+            rgba(26, 26, 46, 0.3) 0%,
+            rgba(26, 26, 46, 0.5) 50%,
+            rgba(26, 26, 46, 0.8) 100%);
     z-index: 2;
 }
 
