@@ -1,0 +1,106 @@
+/* =========================================
+   HARMONIE TYPOGRAPHIQUE & ESPACEMENT
+   Design System: High Energy / Modern
+   ========================================= */
+
+/* --- TITRES --- */
+.h2-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    /* Bold */
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    /* Responsive : 32px -> 40px */
+    line-height: 1.2;
+    color: #1A1A2E;
+    /* Dark Navy ou var(--color-text-dark) */
+    margin: 0;
+}
+
+.text-primary {
+    color: #0066B3;
+    /* Bleu O'Fitness */
+}
+
+/* --- SUR-TITRES (LABELS) --- */
+.text-accent {
+    color: #00A3FF;
+    /* Cyan lumineux */
+    font-size: 0.875rem;
+    /* 14px */
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-spacing-sm {
+    letter-spacing: 2px;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+/* --- PARAGRAPHES --- */
+.text-lead {
+    font-size: 1.125rem;
+    /* 18px */
+    line-height: 1.6;
+    color: #333344;
+    font-weight: 400;
+}
+
+.text-body {
+    font-size: 1rem;
+    /* 16px */
+    line-height: 1.6;
+    color: #555566;
+}
+
+/* --- ESPACEMENTS UTILITAIRES --- */
+.margin-top-xs {
+    margin-top: 8px;
+}
+
+.margin-bottom-sm {
+    margin-bottom: 16px;
+}
+
+.margin-bottom-md {
+    margin-bottom: 32px;
+}
+
+.margin-bottom-lg {
+    margin-bottom: 48px;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .h2-title {
+        font-size: 1.75rem;
+        /* ~28px sur mobile */
+    }
+}
+
+/* --- MODE SOMBRE / INVERSE (Pour sections à fond sombre) --- */
+.text-inverse .h2-title {
+    color: #FFFFFF;
+}
+
+.text-inverse .text-lead {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.text-inverse .text-body {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.text-inverse .text-primary {
+    color: #3399FF;
+    /* Bleu éclairci pour lisibilité sur fond noir */
+}
+
+.text-inverse .text-accent {
+    color: #00E5FF;
+    /* Cyan fluo */
+}

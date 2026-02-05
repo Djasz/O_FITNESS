@@ -593,15 +593,26 @@ section {
 
 .vision-image {
   order: 1;
-  border-radius: var(--radius-lg);
+  /* Note: Sur desktop, modifier l'ordre HTML. Sur mobile, garde l'image en haut. */
+  border-radius: 24px;
+  /* AJUSTABLE : Arrondi du cadre */
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  /* AJUSTABLE : Ombre portée */
 }
 
 .vision-image img {
   width: 100%;
-  height: 280px;
+  height: auto;
+  /* AJUSTABLE : Hauteur de l'image (ex: 500px, 100%) */
   object-fit: cover;
+  /* 'cover' (coupe) ou 'contain' (entier) */
+  transition: transform 0.5s ease;
+}
+
+.vision-image:hover img {
+  transform: scale(1.05);
+  /* Zoom léger au survol */
 }
 
 /* ============ SOLUTIONS SECTION ============ */
@@ -1208,7 +1219,7 @@ section {
 
 .footer-social {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   gap: var(--spacing-sm);
 }
 
@@ -1617,7 +1628,7 @@ section {
     padding: 10px 24px;
     font-size: 14px;
     min-height: 42px;
-    border-radius: var(--radius-xl);
+    border-radius: 50px;
     white-space: nowrap;
   }
 
@@ -1638,7 +1649,7 @@ section {
 
   /* Vision */
   .vision-image img {
-    height: 420px;
+    height: 600px;
   }
 
   /* Solutions */

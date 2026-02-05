@@ -1,0 +1,43 @@
+/* ========================================
+   ANIMATION - OPTION A : POWER SLIDE (GAUCHE)
+   ======================================== */
+
+@keyframes heroPowerSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+        /* Part de 100px à gauche */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* Arrive à sa place */
+    }
+}
+
+.hero-power-slide {
+    opacity: 0;
+    /* Caché au départ */
+    transform: translateX(-100px);
+    /* Position initiale hors champ */
+    will-change: transform, opacity;
+}
+
+/* L'animation ne se lance que quand la classe .loaded est ajoutée au body */
+body.loaded .hero-power-slide {
+    animation: heroPowerSlide 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Décalages pour l'effet de cascade */
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}

@@ -1017,7 +1017,10 @@ body.high-energy .whatsapp-float a:hover {
 .he-preloader-logo {
     width: 100px;
     height: auto;
-    margin-bottom: 24px;
+    display: block;
+    /* Comportement bloc pour le margin auto */
+    margin: 0 auto 24px;
+    /* Centré horizontalement + Marge bas */
     animation: preloaderPulse 1.5s ease-in-out infinite;
 }
 
@@ -1041,6 +1044,8 @@ body.high-energy .whatsapp-float a:hover {
     background: rgba(0, 102, 179, 0.1);
     border-radius: 10px;
     overflow: hidden;
+    margin: 0 auto;
+    /* Centrage horizontal */
 }
 
 .he-preloader-progress {
@@ -1147,4 +1152,45 @@ body.high-energy .whatsapp-float a:hover {
         font-size: 11px;
         padding: 8px 16px;
     }
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   14. ANIMATIONS SCROLL REVEAL (Manquantes)
+   ════════════════════════════════════════════════════════════════════════════ 
+   Activées par high-energy.js via IntersectionObserver.
+*/
+
+/* --- ÉLÉMENTS DE BASE --- */
+.he-reveal,
+.he-slide-left,
+.he-slide-right,
+.he-scale {
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+    /* Fix flou : retrait will-change + lissage police */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Décalage Gauche (Sort de gauche, va vers droite) */
+.he-slide-left {
+    transform: translateX(-80px);
+    /* Plus prononcé */
+}
+
+/* Décalage Droite (Sort de droite, va vers gauche) */
+.he-slide-right {
+    transform: translateX(80px);
+    /* Plus prononcé */
+}
+
+/* Mise à l'échelle (Zoom in) */
+.he-scale {
+    transform: scale(0.9);
+}
+
+/* --- ÉTAT RÉVÉLÉ (Ajouté par le JS) --- */
+.revealed {
+    opacity: 1 !important;
+    transform: translate(0, 0) scale(1) !important;
 }

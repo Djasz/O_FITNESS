@@ -78,6 +78,12 @@
        
        ──────────────────────────────────────────────────────────────────────── */
     init() {
+      // 0. Toujours forcer le scroll en haut au rechargement
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+
       // Activer le mode High Energy en ajoutant la classe au body
       // Cette classe active tous les styles CSS du fichier high-energy.css
       document.body.classList.add('high-energy');
@@ -118,31 +124,21 @@
      ══════════════════════════════════════════════════════════════════════════ */
 
   HE.initPreloader = function () {
-    // Créer l'élément du preloader
-    const preloader = document.createElement('div');
-    preloader.className = 'he-preloader';
+    // Sélectionner l'élément du preloader existant (inséré en HTML)
+    const preloader = document.querySelector('.he-preloader');
 
-    // Structure HTML du preloader
-    preloader.innerHTML = `
-      <div class="he-preloader-inner">
-        <!-- Logo O'Fitness -->
-        <img src="images/O'Fitness logo_1.png" alt="O'Fitness" class="he-preloader-logo">
-        <!-- Barre de progression animée -->
-        <div class="he-preloader-bar">
-          <div class="he-preloader-progress"></div>
-        </div>
-      </div>
-    `;
-
-    // Insérer au tout début du body
-    document.body.prepend(preloader);
+    // Si pas de preloader trouvé, on arrête
+    if (!preloader) return;
 
     // Attendre le chargement complet de la page
     window.addEventListener('load', () => {
       // Délai minimum pour que l'animation de la barre se termine
       setTimeout(() => {
-        // Ajouter la classe qui déclenche le fade-out (CSS)
+        // Ajouter la classe qui déclenche le fade-out du loader (CSS)
         preloader.classList.add('hidden');
+
+        // DÉCLENCHEUR ANIMATION HERO : Ajouter la classe .loaded au body
+        document.body.classList.add('loaded');
 
         // Supprimer l'élément du DOM après la transition
         setTimeout(() => preloader.remove(), 500);
@@ -455,7 +451,7 @@
        ──────────────────────────────────────────────────────────────────────── */
     const heroContent = document.querySelector('.hero-content');
 
-    if (heroContent && !this.isMobile) {
+    /*if (heroContent && !this.isMobile) {
       document.addEventListener('mousemove', (e) => {
         // Calculer le déplacement depuis le centre de l'écran
         const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
@@ -463,7 +459,7 @@
 
         heroContent.style.transform = `translate(${moveX}px, ${moveY}px)`;
       });
-    }
+    }*/
   };
 
 

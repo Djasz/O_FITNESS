@@ -5,10 +5,10 @@
 
 /* Conteneur principal du Marquee */
 .logo-marquee-section {
-    margin: 80px 0;
-    /* Plus d'espace autour */
-    padding: 60px 0;
-    /* Hauteur de la bande augmentée */
+    margin: 0;
+    /* Espace externe supprimé */
+    padding: 20px 0;
+    /* Espace interne réduit */
     overflow: hidden;
     position: relative;
     background: var(--he-bg-tertiary);
@@ -71,10 +71,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 220px;
-    /* Plus large (était 140px) */
+    min-width: 180px;
+    /* Un peu réduit pour éviter trop de vide */
     height: 100px;
-    /* Plus haut (était 50px) */
     filter: grayscale(100%);
     transition: all 0.4s ease;
 }
@@ -89,7 +88,6 @@
 }
 
 /* Hover sur logo individuel */
-/* Hover sur logo individuel */
 .marquee-logo:hover {
     filter: grayscale(0%);
 }
@@ -99,82 +97,107 @@
     transform: scale(1.05);
 }
 
-.marquee-logo img {
-    width: 100%;
-    height: 100%;
-    max-width: 200px;
-    /* Image plus grande (était 140px) */
-    max-height: 85px;
-    /* Image plus haute (était 45px) */
-    object-fit: contain;
-    transition: all 0.4s ease;
-}
-
-.marquee-logo:hover img {
-    transform: scale(1.1);
-    /* Zoom un peu plus fort */
-}
-
-/* Animation de défilement infini - Très lente */
-@keyframes marqueeScroll {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-/* Titre discret au-dessus du marquee (optionnel) */
 .marquee-label {
     text-align: center;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--color-text-gray);
-    margin-bottom: 30px;
-    opacity: 0.7;
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+    opacity: 0.6;
+    font-weight: 600;
 }
 
-/* Responsive - Mobile */
-@media (max-width: 768px) {
-    .logo-marquee-section {
-        margin: 40px 0;
-        padding: 30px 0;
+/* Animation de défilement infini */
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
     }
 
-    .logo-marquee-section::before,
-    .logo-marquee-section::after {
-        width: 60px;
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive */
+/* Responsive */
+@media (max-width: 768px) {
+    .logo-marquee-section {
+        padding: 10px 0;
+        /* Espace réduit au minimum */
     }
 
     .logo-marquee-group {
-        gap: 50px;
-        padding: 0 25px;
+        gap: 20px;
+        /* Plus serré */
+        padding: 0 10px;
     }
 
     .marquee-logo {
         min-width: 100px;
-        height: 40px;
+        height: 50px;
     }
 
-    .marquee-logo svg {
-        max-width: 100px;
-        max-height: 35px;
-    }
-
-    /* Animation plus rapide sur mobile pour compenser la petite taille */
-    .logo-marquee {
-        animation-duration: 40s;
+    /* Mobile adjustments for images */
+    .marquee-logo img {
+        height: 40px !important;
     }
 }
 
-/* Responsive - Tablette */
-@media (max-width: 1024px) {
+/* =========================================
+   AJUSTEMENTS DE TAILLE DES LOGOS (IMAGES)
+   ========================================= */
 
-    .logo-marquee-section::before,
-    .logo-marquee-section::after {
-        width: 100px;
-    }
+/* 1. Base pour toutes les images */
+.marquee-logo img {
+    height: 80px;
+    /* Hauteur standard par défaut */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* 2. AJUSTEMENTS INDIVIDUELS 
+   Changez la valeur 'height' pour agrandir ou réduire un logo spécifique 
+*/
+
+/* Colibris Mau */
+img[src*="Colibris"] {
+    height: 90px;
+}
+
+/* Iscome */
+img[src*="Iscome"] {
+    height: 80px;
+}
+
+/* Commune Zio */
+img[src*="Commune_Zio"] {
+    height: 90px;
+}
+
+/* Ministère Sport (attention à l'accent dans le nom du fichier) */
+img[src*="Minitère_sport"] {
+    height: 90px;
+}
+
+/* Omel */
+img[src*="Omel"] {
+    height: 50px;
+}
+
+/* Ambassade France */
+img[src*="AMbassade_France"] {
+    height: 85px;
+}
+
+/* =========================================
+   HOVER EFFECT (Images)
+   ========================================= */
+.marquee-logo:hover img {
+    transform: scale(1.1);
+    /* Zoom au survol */
+    filter: grayscale(0%);
+    /* Retour couleur */
+    cursor: pointer;
 }

@@ -136,22 +136,149 @@
     }
 }
 
-/* Responsive - Mobile */
+/* ========================================
+   RESPONSIVE - MOBILE (CORRECTION URGENTE)
+   ======================================== */
+
 @media (max-width: 768px) {
-    .text-outline-xxl {
-        font-size: clamp(2.5rem, 10vw, 5rem) !important;
+
+    /* ─────────────────────────────────────────────
+       1. CENTRAGE GLOBAL DU CONTENU HERO
+       ───────────────────────────────────────────── */
+
+    .hero-content-left {
+        text-align: center !important;
+        align-items: center !important;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
+    /* ─────────────────────────────────────────────
+       2. TITRE H1 - UNIFORMISATION TOTALE
+       ───────────────────────────────────────────── */
+
+    .hero-content h1 {
+        font-size: 2.5rem !important;
+        /* Taille unique pour TOUT le titre */
+        line-height: 1.1 !important;
+        /* Line-height compact et puissant */
+        font-weight: 800 !important;
+        text-align: center !important;
+        margin-bottom: 24px !important;
+        padding: 0 !important;
+    }
+
+    /* Force la même taille sur TOUS les enfants du titre */
+    .hero-content h1,
+    .hero-content h1 span,
+    .hero-content h1 .text-gradient,
+    .hero-content h1 .text-solid,
+    .hero-content h1 .text-solid-xxl {
+        font-size: 2.5rem !important;
+        line-height: 1.1 !important;
+    }
+
+    /* ─────────────────────────────────────────────
+       3. SUPPRESSION DE L'EFFET OUTLINE MOBILE
+       ───────────────────────────────────────────── */
+
+    .text-outline-xxl {
+        /* Supprime complètement l'effet outline XXL sur mobile */
+        -webkit-text-stroke: 0 !important;
+        text-stroke: 0 !important;
+        font-size: 2.5rem !important;
+        /* Même taille que le reste */
+    }
+
+    .text-solid-xxl {
+        /* Neutralise l'effet "solid" spécial - tout devient uniforme */
+        -webkit-text-fill-color: inherit !important;
+        text-shadow: none !important;
+        font-size: 2.5rem !important;
+        margin-top: 0 !important;
+    }
+
+    /* ─────────────────────────────────────────────
+       4. PARAGRAPHE & BADGE - CENTRAGE
+       ───────────────────────────────────────────── */
+
+    .hero-subtitle {
+        text-align: center !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+    }
+
+    .hero-badge {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* ─────────────────────────────────────────────
+       5. BOUTONS CTA - LARGEUR PLEINE & CENTRAGE
+       ───────────────────────────────────────────── */
+
     .btn-hero-primary {
-        min-width: 100%;
-        padding: 16px 30px !important;
+        min-width: 100% !important;
+        width: 100% !important;
+        padding: 18px 30px !important;
+        font-size: 16px !important;
+        text-align: center !important;
+        justify-content: center !important;
     }
 
     .hero-cta-brutalist {
-        align-items: stretch;
+        align-items: center !important;
+        /* Centre les boutons */
+        width: 100%;
     }
 
     .hero-link-secondary {
-        justify-content: center;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    /* ─────────────────────────────────────────────
+       6. OUTLINE EN ARRIÈRE-PLAN (Caché sur mobile)
+       ───────────────────────────────────────────── */
+
+    .hero-title-outline {
+        display: none !important;
+        /* Masque complètement l'outline background sur mobile */
+    }
+
+    /* ─────────────────────────────────────────────
+       7. ESPACEMENT & PADDING MOBILE
+       ───────────────────────────────────────────── */
+
+    .hero {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* TRÈS PETITS ÉCRANS (< 375px - iPhone SE) */
+@media (max-width: 375px) {
+
+    .hero-content h1,
+    .hero-content h1 span,
+    .hero-content h1 .text-gradient,
+    .hero-content h1 .text-solid,
+    .hero-content h1 .text-solid-xxl {
+        font-size: 2rem !important;
+        /* Réduit légèrement pour très petits écrans */
+    }
+
+    .hero-subtitle {
+        font-size: 15px !important;
     }
 }
