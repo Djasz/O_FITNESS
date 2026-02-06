@@ -201,3 +201,24 @@ img[src*="AMbassade_France"] {
     /* Retour couleur */
     cursor: pointer;
 }
+
+/* ============ MOBILE : COULEUR FORCEE & UX ============ */
+@media (max-width: 768px) {
+
+    /* Il faut cibler le conteneur parent qui a le filtre grayscale */
+    .marquee-logo {
+        filter: grayscale(0%) !important;
+        opacity: 1 !important;
+    }
+
+    .marquee-logo img {
+        filter: none !important;
+        /* Plus nécessaire mais on laisse au cas où */
+        opacity: 1 !important;
+    }
+
+    /* Empêcher la pause au toucher/scroll sur mobile */
+    .logo-marquee-section:hover .logo-marquee {
+        animation-play-state: running !important;
+    }
+}

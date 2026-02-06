@@ -565,6 +565,8 @@ section {
 
 .vision-content {
   order: 2;
+  text-align: center;
+  /* Centrer sur mobile */
 }
 
 .section-label {
@@ -1207,7 +1209,7 @@ section {
 }
 
 .footer-logo .logo-img {
-  height: 40px;
+  height: 80px;
   width: auto;
 }
 
@@ -1444,6 +1446,8 @@ section {
 
   .vision-content {
     order: 1;
+    text-align: left;
+    /* Remettre à gauche sur desktop */
   }
 
   .vision-image {
@@ -2123,4 +2127,89 @@ textarea:focus-visible {
   .gallery-grid {
     grid-template-columns: repeat(6, 1fr);
   }
+}
+
+/* ============ MOBILE OPTIMIZATIONS (Max 768px) ============ */
+@media screen and (max-width: 768px) {
+
+  /* WhatsApp Button - Icon Only (Cercle discret) */
+  .whatsapp-float a {
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border-radius: 50%;
+    /* Cercle parfait */
+    justify-content: center;
+    font-size: 0;
+    /* Cache le texte "Discutez avec nous" */
+    gap: 0;
+  }
+
+  .whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+    margin: 0;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  /* Footer - Centrage Mobile Complet */
+  .footer-top-pro {
+    text-align: center;
+  }
+
+  .footer-brand {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .footer-contact {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .footer-contact-list li {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    gap: 10px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .footer-social-section {
+    text-align: center;
+  }
+
+  .footer-section-title {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center !important;
+  }
+}
+
+/* ============ GLOBAL OVERRIDES ============ */
+/* Force le logo du footer à 90px partout et en BLANC */
+.footer-logo .logo-img {
+  height: 90px !important;
+  max-height: none !important;
+  width: auto !important;
+  filter: brightness(0) invert(1) !important;
+  /* Rendre le logo BLANC */
+  mix-blend-mode: normal !important;
+  /* Pas de transparence bizarre */
 }

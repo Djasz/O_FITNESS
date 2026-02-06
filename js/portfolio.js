@@ -12,7 +12,7 @@ const portfolioProjects = {
         date: "Janvier 2026",
         description: "Une journée de team building intensive pour les 50 collaborateurs de VitalCorp. Au programme : course d'orientation, yoga matinal et ateliers nutrition. L'événement a permis de renforcer la cohésion d'équipe et de sensibiliser aux bienfaits d'un mode de vie actif.",
         images: [
-            "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80",
+            "images/Project_1/IMG_6915.jpg",
             "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1200&q=80",
             "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80",
             "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80"
@@ -43,15 +43,15 @@ const portfolioProjects = {
         ]
     },
     project4: {
-        title: "Course Solidaire 5km",
+        title: "Campagne de sensibilisation contre le cancer du sein",
         category: "Public",
         date: "Octobre 2025",
-        description: "Organisation d'une course solidaire de 5km réunissant plus de 200 participants. L'événement a permis de collecter des fonds pour associations locales tout en promouvant l'activité physique.",
+        description: "Le 18 octobre, O'Fitness a organisé une session Zumba Fitness solidaire réunissant 400 participants pour sensibiliser au cancer du sein. Ouverte à tous, cette expérience unique a transformé l'énergie collective en un puissant message d'espoir. Chaque mouvement comptait.",
         images: [
-            "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80",
-            "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1200&q=80",
-            "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80",
-            "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80"
+            "images/Project_4/IMG_6915.jpg",
+            "images/Project_4/IMG_6907.jpg",
+            "images/Project_4/IMG_7167.jpg",
+            "images/Project_4/IMG_7070.jpg"
         ]
     },
     project5: {

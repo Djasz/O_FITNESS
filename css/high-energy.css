@@ -1190,7 +1190,35 @@ body.high-energy .whatsapp-float a:hover {
 }
 
 /* --- ÉTAT RÉVÉLÉ (Ajouté par le JS) --- */
+/* --- ÉTAT RÉVÉLÉ (Ajouté par le JS) --- */
 .revealed {
     opacity: 1 !important;
     transform: translate(0, 0) scale(1) !important;
+    filter: blur(0) !important;
+    /* Reset du flou mobile */
+}
+
+/* ============ MOBILE OPTIMIZATIONS (Max 768px) ============ */
+@media (max-width: 768px) {
+
+    /* 1. Reset des mouvements latéraux (Trop agressifs sur mobile) */
+    .he-slide-left,
+    .he-slide-right {
+        transform: translateY(40px) !important;
+        /* Devient un Fade Up vertical */
+    }
+
+    /* 2. Effet Blur Focus pour les textes (Vision) */
+    /* On cible les contenus qui avaient des slides latéraux */
+    .vision-content.he-slide-left,
+    .hero-power-slide {
+        filter: blur(10px);
+        /* Commence flou */
+        transition: opacity 1s ease, transform 1s cubic-bezier(0.2, 0.8, 0.2, 1), filter 1.2s ease;
+    }
+
+    /* 3. Image : Zoom doux au lieu de slide */
+    .vision-image.he-slide-right {
+        transform: scale(0.9) translateY(20px) !important;
+    }
 }

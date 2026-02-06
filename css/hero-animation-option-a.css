@@ -41,3 +41,28 @@ body.loaded .hero-power-slide {
 .delay-300 {
     animation-delay: 0.3s;
 }
+
+/* --- MOBILE OPTIMIZATION : FADE UP + BLUR --- */
+@media (max-width: 768px) {
+    @keyframes heroPowerSlide {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+            /* Vient du bas */
+            filter: blur(10px);
+            /* Départ flou */
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+            /* Net */
+        }
+    }
+
+    .hero-power-slide {
+        transform: translateY(30px);
+        /* Initiale alignée avec keyframe */
+    }
+}
