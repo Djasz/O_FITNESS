@@ -1,6 +1,6 @@
 /**
  * ════════════════════════════════════════════════════════════════════════════
- * PORTFOLIO - Système de filtrage et galerie
+ * PORTFOLIO - Système de filtrage et galerie (Optimisé & Swipe Mobile)
  * ════════════════════════════════════════════════════════════════════════════
  */
 
@@ -10,24 +10,21 @@ const portfolioProjects = {
         title: "Team Building VitalCorp",
         category: "Entreprise",
         date: "Janvier 2026",
-        description: "Une journée de team building intensive pour les 50 collaborateurs de VitalCorp. Au programme : course d'orientation, yoga matinal et ateliers nutrition. L'événement a permis de renforcer la cohésion d'équipe et de sensibiliser aux bienfaits d'un mode de vie actif.",
+        description: "Une journée de team building intensive pour les 50 collaborateurs de VitalCorp.",
         images: [
-            "images/Project_1/IMG_6915.jpg",
+            "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80",
             "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1200&q=80",
-            "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80",
-            "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80"
+            "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80"
         ]
     },
     project2: {
         title: "Programme Bien-être ONG Développement",
         category: "ONG",
         date: "Décembre 2025",
-        description: "Programme mensuel de bien-être pour l'ONG Développement. Sessions de sport adaptées, ateliers de gestion du stress et conseils nutrition personnalisés pour les 30 membres de l'équipe.",
+        description: "Programme mensuel de bien-être pour l'ONG Développement.",
         images: [
             "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
-            "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=1200&q=80",
-            "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80",
-            "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80"
+            "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=1200&q=80"
         ]
     },
     project3: {
@@ -36,46 +33,45 @@ const portfolioProjects = {
         date: "Novembre 2025",
         description: "Séminaire de 3 jours combinant formation professionnelle et activités fitness pour la Banque Internationale. Un programme sur mesure alliant productivité et bien-être.",
         images: [
-            "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80",
-            "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80",
-            "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80",
-            "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80"
+            "images/Project_3/AssoColibrsi_Ofitness_OctobreRose_Campaign_Apothéose.jpg",
+
+            "images/Project_3_Optimized/Photo_01.webp",
+            "images/Project_3_Optimized/Photo_03.webp",
+            "images/Project_3_Optimized/Photo_04.webp",
+            "images/Project_3_Optimized/Photo_05.webp",
+            "images/Project_3_Optimized/Photo_06.webp",
+            "images/Project_3_Optimized/Photo_07.webp",
+            "images/Project_3_Optimized/Photo_08.webp",
+            "images/Project_3_Optimized/Photo_010.webp",
+            "images/Project_3_Optimized/Photo_011.webp",
+            "images/Project_3_Optimized/Photo_09.webp",
+            "images/Project_3_Optimized/Photo_012.webp",
+            "images/Project_3_Optimized/Photo_013.webp",
+            "images/Project_3_Optimized/Photo_014.webp",
+            "images/Project_3_Optimized/Photo_015.webp",
+            "images/Project_3_Optimized/Photo_016.webp",
+            "images/Project_3_Optimized/Photo_017.webp",
+            "images/Project_3_Optimized/Photo_018.webp",
+            "images/Project_3_Optimized/Photo_019.webp",
+            "images/Project_3_Optimized/Photo_02.webp",
+            "images/Project_3_Optimized/Photo_020.webp",
+            "images/Project_3_Optimized/Photo_021.webp",
+            "images/Project_3_Optimized/Photo_022.webp",
+            "images/Project_3_Optimized/Photo_023.webp",
+            "images/Project_3_Optimized/Photo_024.webp",
+            "images/Project_3_Optimized/Photo_025.webp",
+
+            "images/Project_3/AssoColibrsi_Ofitness_OctRose_Campaign_Merci_2.jpg",
         ]
     },
     project4: {
-        title: "Campagne de sensibilisation contre le cancer du sein",
+        title: "Course Solidaire 5km",
         category: "Public",
         date: "Octobre 2025",
-        description: "Le 18 octobre, O'Fitness a organisé une session Zumba Fitness solidaire réunissant 400 participants pour sensibiliser au cancer du sein. Ouverte à tous, cette expérience unique a transformé l'énergie collective en un puissant message d'espoir. Chaque mouvement comptait.",
+        description: "Organisation d'une course solidaire de 5km réunissant plus de 200 participants.",
         images: [
-            "images/Project_4/IMG_6915.jpg",
-            "images/Project_4/IMG_6907.jpg",
-            "images/Project_4/IMG_7167.jpg",
-            "images/Project_4/IMG_7070.jpg"
-        ]
-    },
-    project5: {
-        title: "Sessions Yoga Startup FinTech",
-        category: "Entreprise",
-        date: "Septembre 2025",
-        description: "Programme hebdomadaire de yoga adapté au rythme intense d'une startup FinTech. Sessions de 45 minutes le matin pour bien démarrer la journée.",
-        images: [
-            "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80",
-            "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80",
-            "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80",
-            "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1200&q=80"
-        ]
-    },
-    project6: {
-        title: "Coaching Groupe ONG Santé",
-        category: "ONG",
-        date: "Août 2025",
-        description: "Programme de coaching sportif collectif pour l'ONG Santé. Renforcement musculaire, cardio et cohésion d'équipe au rendez-vous.",
-        images: [
-            "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1200&q=80",
-            "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80",
-            "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
-            "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80"
+            "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80",
+            "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1200&q=80"
         ]
     }
 };
@@ -83,6 +79,10 @@ const portfolioProjects = {
 // Variables globales
 let currentProject = null;
 let currentImageIndex = 0;
+
+// GESTION DU SWIPE MOBILE
+let touchStartX = 0;
+let touchEndX = 0;
 
 // ========================================
 // FILTRAGE DES PROJETS
@@ -123,7 +123,31 @@ document.addEventListener('DOMContentLoaded', () => {
             openPortfolioModal(projectId);
         });
     });
+
+    // Initialiser les écouteurs de swipe sur l'image principale
+    const modalImageContainer = document.querySelector('.portfolio-modal-body');
+    if (modalImageContainer) {
+        modalImageContainer.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        modalImageContainer.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+    }
 });
+
+// LOGIQUE SWIPE
+function handleSwipe() {
+    const threshold = 50; // Distance min pour swipe
+    if (touchEndX < touchStartX - threshold) {
+        navigatePortfolioImage(1); // Suivant (Swipe Gauche)
+    }
+    if (touchEndX > touchStartX + threshold) {
+        navigatePortfolioImage(-1); // Précédent (Swipe Droite)
+    }
+}
 
 // ========================================
 // MODAL / GALERIE
